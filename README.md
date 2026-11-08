@@ -15,6 +15,15 @@
 | `src/explorer/CapabilityScanner.kt` | SDK 지원 여부 일괄 확인 도구 (116건 스캔) |
 | `src/explorer/DrivingStateProbe.kt` | 주행 상태(기어·주차 브레이크) 읽기 검증 코드 |
 
+## 테스트 환경과 필요한 설정
+- 에뮬레이터: Pleos Connect Emulator v2.1.0 (Android Automotive 14, AVD `Pleos_Connect_v2.1.0`, cold boot)
+- 개발 도구: Android Studio, JDK 17, Gradle 8.10.2, Kotlin / Jetpack Compose, Vehicle SDK 2.3.2
+- 필요한 설정: Pleos Playground 가입·프로젝트 생성(클라이언트 정보는 저장소에 포함하지 않음), AndroidManifest의 user permission 선언
+- 기어 변경 시험: `adb forward tcp:8088 tcp:8088` 후 브라우저에서 Pleos Virtual Console(http://127.0.0.1:8088) 사용
+
+## APK 위치
+- **현재 저장소에는 APK가 없습니다.** 이 저장소는 기획 문서와 검증 코드 단계이며, 서비스 앱(release APK)은 1차 심사 이후 개발해 `apk/` 폴더에 `팀명_앱이름_release.apk` 형식으로 추가할 예정입니다.
+
 ## 검증 코드 사용 방법
 이 저장소에는 **공식 샘플 앱 코드를 포함하지 않습니다.** 공식 샘플 앱
 (`ai.pleos.playground.sample.vehicle`, Vehicle SDK 2.3.2)에 위 두 파일을 `explorer` 패키지에 추가해 사용합니다.
