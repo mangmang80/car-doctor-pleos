@@ -1,0 +1,7 @@
+local.properties
+*.jks
+*.keystore
+.gradle/
+build/
+.idea/
+*.mp4
